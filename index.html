@@ -3,65 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesa | Data Scientist Portfolio</title>
+    <title>Mahesh A | Data Scientist Portfolio</title>
     <style>
         :root {
             --bg-color: #f4f7f6;
-            --text-color: #333;
-            --primary-color: #2c3e50;
+            --text-color: #2c3e50;
+            --primary-color: #1a252f;
             --accent-color: #3498db;
+            --secondary-accent: #2ecc71;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
         header {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c3e50 100%);
             color: #fff;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
+            border-bottom: 5px solid var(--accent-color);
         }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        section { background: #fff; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; }
-        .skills-badge {
-            display: inline-block;
-            background: #e1e8ed;
-            color: var(--primary-color);
-            padding: 5px 12px;
-            margin: 5px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
+        header h1 { 
+            margin: 0; 
+            font-size: 2.8rem; 
+            letter-spacing: 2px;
         }
-        .project-card {
-            border-left: 4px solid var(--accent-color);
-            padding-left: 15px;
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 10px 0 20px 0;
+        }
+        .container { max-width: 950px; margin: 30px auto; padding: 0 20px; }
+        section { 
+            background: #fff; 
+            padding: 30px; 
+            margin-bottom: 25px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+        }
+        h2 { 
+            color: var(--primary-color); 
+            border-bottom: 3px solid var(--accent-color); 
+            padding-bottom: 8px; 
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 15px;
+        }
+        .skills-badge {
+            background: #eef2f5;
+            color: #34495e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid #dcdde1;
+        }
+        .project-card, .exp-card {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+        .project-card h3, .exp-card h3 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+        .date {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9rem;
         }
         .contact-links a {
             color: #fff;
-            margin: 0 10px;
+            margin: 0 12px;
             text-decoration: none;
             font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
         }
-        .contact-links a:hover { text-decoration: underline; }
+        .contact-links a:hover { 
+            background: var(--accent-color);
+        }
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        li { margin-bottom: 5px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>MAHESA</h1>
-    <p>Data Scientist | B.Sc. Computer Science & Data Science Student</p>
+    <h1>MAHESH A</h1>
+    <p>Data Scientist | B.Sc. Computer Science with Data Science Student</p>
     <div class="contact-links">
-        <a href="mailto:maheshmahesh00183@gmail.com">Email</a> | 
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="mailto:maheshmahesh00183@gmail.com">📩 Email</a>
+        <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/Mahesh00184" target="_blank">💻 GitHub</a>
     </div>
 </header>
 
@@ -73,32 +121,69 @@
 
     <section id="skills">
         <h2>Technical Skills</h2>
-        <div class="skills-badge">Python</div>
-        <div class="skills-badge">Pandas & NumPy</div>
-        <div class="skills-badge">Matplotlib, Seaborn & Plotly</div>
-        <div class="skills-badge">Power BI</div>
-        <div class="skills-badge">HTML / CSS</div>
-        <div class="skills-badge">MS Excel</div>
-        <div class="skills-badge">C / C++</div>
+        <div class="skills-container">
+            <div class="skills-badge">Python</div>
+            <div class="skills-badge">Pandas & NumPy</div>
+            <div class="skills-badge">Matplotlib, Seaborn & Plotly</div>
+            <div class="skills-badge">Power BI</div>
+            <div class="skills-badge">MS Excel</div>
+            <div class="skills-badge">HTML / CSS</div>
+            <div class="skills-badge">C / C++</div>
+        </div>
     </section>
 
     <section id="projects">
-        <h2>Featured Projects</h2>
+        <h2>Projects</h2>
         <div class="project-card">
-            <h3>Sales Data Analysis Dashboard</h3>
-            <p><strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly), Jupyter Notebook, Power BI</p>
-            <p>Interactive data application built to track multi-region sales performance, isolate shifting seasonal trends, and model consumer behavior patterns to optimize retail inventory management.</p>
-            <a href="#" style="color: var(--accent-color); font-weight: bold;">View Live Project →</a>
+            <h3>Sales Data Analysis</h3>
+            <p class="date">Tools: Python, Jupyter Notebook, Power BI</p>
+            <p><strong>Objective:</strong> Identified sales trends, key customer behavior parameters, and regional product performances utilizing statistical workflows and advanced dashboards.</p>
+            <ul>
+                <li>Cleaned and structured massive transactional datasets using Pandas and NumPy.</li>
+                <li>Created dynamic data visualizations using Seaborn and Plotly to report revenue patterns.</li>
+            </ul>
         </div>
     </section>
 
     <section id="experience">
-        <h2>Experience & Education</h2>
-        <h3>Data Science Intern — Vision Crafters (2025)</h3>
-        <p>Focused on core data handling, comprehensive data cleaning pipelines, and exploratory data analysis (EDA) using standard Python visualization libraries.</p>
-        
-        <h3>B.Sc. Computer Science with Data Science</h3>
-        <p>Rathinam College of Arts and Science | CGPA: 7.02 (2025 - Present)</p>
+        <h2>Internship & Experience</h2>
+        <div class="exp-card">
+            <h3>Data Science Intern</h3>
+            <p style="margin: 0; font-weight: bold; color: var(--accent-color);">Vision Crafters <span class="date">| 2025</span></p>
+            <p>Developed a clear, hands-on understanding of data science pipelines, core analytical procedures, advanced data cleaning frameworks, data handling configurations, and detailed visualizations.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="exp-card">
+            <h3>B.Sc. Computer Science with Data Science</h3>
+            <p style="margin: 0;">Rathinam College of Arts and Science — <strong>CGPA: 7.02</strong> <span class="date">| 2025 - Present</span></p>
+        </div>
+        <div class="exp-card">
+            <h3>Schooling Background</h3>
+            <p style="margin: 0;">Nehru Matriculation Higher Secondary School</p>
+            <ul>
+                <li>HSC: 52% (2024)</li>
+                <li>SSLC: 50% (2022)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="certifications-achievements">
+        <h2>Certifications & Achievements</h2>
+        <ul>
+            <li><strong>Certification:</strong> Data Analysis with Python — IBM (Coursera)</li>
+            <li><strong>Certification:</strong> Python Technical Suite — Infosys Springboard</li>
+            <li><strong>Achievement:</strong> Participant in the regional Design Thinking Competition (2026)</li>
+        </ul>
+    </section>
+
+    <section id="additional-info">
+        <h2>Personal & Soft Skills</h2>
+        <p><strong>Soft Skills:</strong> Team Work | Effective Public Speaking | Strategic Time Management</p>
+        <p><strong>Languages Known:</strong> English (Read, Write, Speak) | Tamil (Read, Write, Speak) | Marathi (Speak)</p>
+        <p><strong>Hobbies:</strong> Competitive Gaming | Creative Thinking & Problem Solving</p>
     </section>
 </div>
 
