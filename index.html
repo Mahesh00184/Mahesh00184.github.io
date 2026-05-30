@@ -1,191 +1,453 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesh A | Data Scientist Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #f4f7f6;
-            --text-color: #2c3e50;
-            --primary-color: #1a252f;
-            --accent-color: #3498db;
-            --secondary-accent: #2ecc71;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #2c3e50 100%);
-            color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--accent-color);
-        }
-        header h1 { 
-            margin: 0; 
-            font-size: 2.8rem; 
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin: 10px 0 20px 0;
-        }
-        .container { max-width: 950px; margin: 30px auto; padding: 0 20px; }
-        section { 
-            background: #fff; 
-            padding: 30px; 
-            margin-bottom: 25px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-        }
-        h2 { 
-            color: var(--primary-color); 
-            border-bottom: 3px solid var(--accent-color); 
-            padding-bottom: 8px; 
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .skills-badge {
-            background: #eef2f5;
-            color: #34495e;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid #dcdde1;
-        }
-        .project-card, .exp-card {
-            border-left: 4px solid var(--accent-color);
-            padding-left: 20px;
-            margin-top: 20px;
-        }
-        .project-card h3, .exp-card h3 {
-            margin: 0 0 5px 0;
-            color: var(--primary-color);
-        }
-        .date {
-            font-style: italic;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-        .contact-links a {
-            color: #fff;
-            margin: 0 12px;
-            text-decoration: none;
-            font-weight: bold;
-            background: rgba(255,255,255,0.1);
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-        .contact-links a:hover { 
-            background: var(--accent-color);
-        }
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        li { margin-bottom: 5px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahesh A | Data Science Portfolio</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#0f172a;
+    --secondary:#1e293b;
+    --accent:#3b82f6;
+    --white:#ffffff;
+    --bg:#f8fafc;
+    --text:#1e293b;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.dark{
+    --bg:#0f172a;
+    --text:#ffffff;
+    --secondary:#1e293b;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.profile{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin:10px 0;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#2563eb;
+}
+
+nav{
+    background:#111827;
+    text-align:center;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+section{
+    margin-bottom:40px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.dark section{
+    background:#1e293b;
+}
+
+h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:#e2e8f0;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:600;
+}
+
+.project{
+    border-left:5px solid #3b82f6;
+    padding-left:20px;
+    margin-bottom:20px;
+}
+
+.timeline{
+    border-left:3px solid #3b82f6;
+    padding-left:20px;
+}
+
+.card{
+    margin-bottom:20px;
+}
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-box{
+    background:#f1f5f9;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.dark .contact-box{
+    background:#334155;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.theme-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+}
+</style>
 </head>
+
 <body>
 
+<button class="theme-btn" onclick="toggleTheme()">
+<i class="fas fa-moon"></i>
+</button>
+
 <header>
-    <h1>MAHESH A</h1>
-    <p>Data Scientist | B.Sc. Computer Science with Data Science Student</p>
-    <div class="contact-links">
-        <a href="mailto:maheshmahesh00183@gmail.com">📩 Email</a>
-        <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
-        <a href="https://github.com/Mahesh00184" target="_blank">💻 GitHub</a>
-    </div>
+
+<img src="profile.jpg" class="profile" alt="Mahesh A">
+
+<h1>MAHESH A</h1>
+
+<p>Data Scientist | B.Sc Computer Science with Data Science</p>
+
+<a href="Mahesh_Resume.pdf" class="btn" download>
+<i class="fas fa-download"></i> Download Resume
+</a>
+
+<a href="mailto:maheshmahesh00183@gmail.com" class="btn">
+<i class="fas fa-envelope"></i> Contact Me
+</a>
+
 </header>
 
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
-    <section id="objective">
-        <h2>Career Objective</h2>
-        <p>To obtain a Data Scientist role that allows me to apply advanced analytical techniques and domain knowledge to design scalable solutions, improve efficiency, and support data-driven growth.</p>
-    </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skills-badge">Python</div>
-            <div class="skills-badge">Pandas & NumPy</div>
-            <div class="skills-badge">Matplotlib, Seaborn & Plotly</div>
-            <div class="skills-badge">Power BI</div>
-            <div class="skills-badge">MS Excel</div>
-            <div class="skills-badge">HTML / CSS</div>
-            <div class="skills-badge">C / C++</div>
-        </div>
-    </section>
+<section id="about">
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Sales Data Analysis</h3>
-            <p class="date">Tools: Python, Jupyter Notebook, Power BI</p>
-            <p><strong>Objective:</strong> Identified sales trends, key customer behavior parameters, and regional product performances utilizing statistical workflows and advanced dashboards.</p>
-            <ul>
-                <li>Cleaned and structured massive transactional datasets using Pandas and NumPy.</li>
-                <li>Created dynamic data visualizations using Seaborn and Plotly to report revenue patterns.</li>
-            </ul>
-        </div>
-    </section>
+<h2>About Me</h2>
 
-    <section id="experience">
-        <h2>Internship & Experience</h2>
-        <div class="exp-card">
-            <h3>Data Science Intern</h3>
-            <p style="margin: 0; font-weight: bold; color: var(--accent-color);">Vision Crafters <span class="date">| 2025</span></p>
-            <p>Developed a clear, hands-on understanding of data science pipelines, core analytical procedures, advanced data cleaning frameworks, data handling configurations, and detailed visualizations.</p>
-        </div>
-    </section>
+<p>
+I am Mahesh A, a passionate Data Science student pursuing
+B.Sc Computer Science with Data Science at Rathinam College of Arts and Science.
+I enjoy working with data, discovering insights, building dashboards,
+and solving real-world problems using Python, Power BI, and Data Analytics.
+</p>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="exp-card">
-            <h3>B.Sc. Computer Science with Data Science</h3>
-            <p style="margin: 0;">Rathinam College of Arts and Science — <strong>CGPA: 7.02</strong> <span class="date">| 2025 - Present</span></p>
-        </div>
-        <div class="exp-card">
-            <h3>Schooling Background</h3>
-            <p style="margin: 0;">Nehru Matriculation Higher Secondary School</p>
-            <ul>
-                <li>HSC: 52% (2024)</li>
-                <li>SSLC: 50% (2022)</li>
-            </ul>
-        </div>
-    </section>
+</section>
 
-    <section id="certifications-achievements">
-        <h2>Certifications & Achievements</h2>
-        <ul>
-            <li><strong>Certification:</strong> Data Analysis with Python — IBM (Coursera)</li>
-            <li><strong>Certification:</strong> Python Technical Suite — Infosys Springboard</li>
-            <li><strong>Achievement:</strong> Participant in the regional Design Thinking Competition (2026)</li>
-        </ul>
-    </section>
+<section id="skills">
 
-    <section id="additional-info">
-        <h2>Personal & Soft Skills</h2>
-        <p><strong>Soft Skills:</strong> Team Work | Effective Public Speaking | Strategic Time Management</p>
-        <p><strong>Languages Known:</strong> English (Read, Write, Speak) | Tamil (Read, Write, Speak) | Marathi (Speak)</p>
-        <p><strong>Hobbies:</strong> Competitive Gaming | Creative Thinking & Problem Solving</p>
-    </section>
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Pandas</div>
+<div class="skill">NumPy</div>
+<div class="skill">Matplotlib</div>
+<div class="skill">Seaborn</div>
+<div class="skill">Plotly</div>
+<div class="skill">Power BI</div>
+<div class="skill">MS Excel</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">C</div>
+<div class="skill">C++</div>
+<div class="skill">SQL</div>
+
 </div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<h3>Sales Data Analysis</h3>
+
+<p>
+<b>Tools:</b> Python, Pandas, NumPy, Matplotlib,
+Seaborn, Plotly, Jupyter Notebook, Power BI
+</p>
+
+<ul>
+<li>Analyzed sales trends and customer behavior.</li>
+<li>Identified product performance patterns.</li>
+<li>Created interactive dashboards.</li>
+<li>Generated business insights from raw data.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2>Internship Experience</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Data Science Intern</h3>
+<p><b>Vision Crafters</b> | 2025</p>
+
+<p>
+Worked on data cleaning, data handling,
+visualization, and analytics using Python,
+Pandas, NumPy, Matplotlib, and Seaborn.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>B.Sc Computer Science with Data Science</h3>
+
+<p>
+Rathinam College of Arts and Science
+</p>
+
+<p>
+CGPA: <b>7.02</b> | 2025 - Present
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Nehru Matriculation Higher Secondary School</h3>
+
+<p>HSC: 52% (2024)</p>
+
+<p>SSLC: 50% (2022)</p>
+
+</div>
+
+</section>
+
+<section id="certificates">
+
+<h2>Certifications & Achievements</h2>
+
+<ul>
+
+<li>Data Analysis with Python - IBM (Coursera)</li>
+
+<li>Python Technical Suite - Infosys Springboard</li>
+
+<li>Python for Data Science - NPTEL</li>
+
+<li>Participant - Design Thinking Competition (2026)</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Soft Skills</h2>
+
+<ul>
+
+<li>Team Work</li>
+
+<li>Public Speaking</li>
+
+<li>Time Management</li>
+
+<li>Problem Solving</li>
+
+<li>Creative Thinking</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Languages Known</h2>
+
+<ul>
+
+<li>English - Read, Write, Speak</li>
+
+<li>Tamil - Read, Write, Speak</li>
+
+<li>Marathi - Speak</li>
+
+</ul>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Information</h2>
+
+<div class="contact">
+
+<div class="contact-box">
+<h3>Email</h3>
+<p>maheshmahesh00183@gmail.com</p>
+</div>
+
+<div class="contact-box">
+<h3>Phone</h3>
+<p>9489574395</p>
+</div>
+
+<div class="contact-box">
+<h3>Location</h3>
+<p>Coimbatore, Tamil Nadu</p>
+</div>
+
+<div class="contact-box">
+<h3>GitHub</h3>
+<a href="https://github.com/Mahesh00184">
+github.com/Mahesh00184
+</a>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 Mahesh A | Data Science Portfolio
+</p>
+
+</footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle("dark");
+}
+
+</script>
 
 </body>
 </html>
+```
